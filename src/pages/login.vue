@@ -11,6 +11,8 @@
 
         <h2>Логин</h2>
 
+
+
         <form @submit.prevent>
             <div class="login">
                 <input
@@ -34,7 +36,7 @@
             </div><br>
 
             <div class="vhod">
-                <button @click="loginUser(user)">войти</button>
+                <button @click="login(user)">войти</button>
             </div>
         </form>
 
@@ -46,6 +48,7 @@
 
 <script>
 import axios from "axios";
+import {mapActions} from "vuex";
 
 export default {
     data(){
@@ -57,15 +60,9 @@ export default {
         }
     },
     methods:{
-        async loginUser(user){
-            try {
-                const response = await axios.post('/auth/login', user)
-                console.log(response)
-            }
-            catch (e) {
-                console.log(e)
-            } 
-        },
+        ...mapActions({
+           login: "auth/loginUser"
+        }),
     },
     name: "login"
 }
