@@ -1,17 +1,13 @@
 <template>
-    <header class="header">
-        <h1>Факультет геоинформатики и информационной безопасности</h1>
-    </header>
+
     <div class="container">
         <div class="roles">
-            <button>деканат</button>
-            <button>студент</button>
-            <button>преподаватель</button>
+            <button @click="setRole(user,'dekanat')">деканат</button>
+            <button @click="setRole(user,'student')">студент</button>
+            <button @click="setRole(user,'teacher')">преподаватель</button>
         </div>
 
         <h2>Логин</h2>
-
-
 
         <form @submit.prevent>
             <div class="login">
@@ -36,7 +32,9 @@
             </div><br>
 
             <div class="vhod">
-                <button @click="login(user)">войти</button>
+                <button
+                    @click="loginUser(user)"
+                >войти</button>
             </div>
         </form>
 
@@ -47,15 +45,22 @@
 </template>
 
 <script>
-import axios from "axios";
 import {mapActions} from "vuex";
+import store from "@/store/store";
+
 
 export default {
+    computed: {
+        store() {
+            return store
+        }
+    },
     data(){
         return{
             user:{
                 login: "",
-                password: ""
+                password: "",
+                role:""
             },
         }
     },
@@ -63,6 +68,14 @@ export default {
         ...mapActions({
            login: "auth/loginUser"
         }),
+        setRole(user, role){
+            user.role = role
+        },
+        async loginUser(user){
+            await this.login(user)
+            if(store.state.auth.isAuth)
+                this.$router.push('/' + user.role)
+        }
     },
     name: "login"
 }
