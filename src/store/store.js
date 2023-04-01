@@ -1,11 +1,17 @@
 import {createStore} from "vuex";
 import {authModule} from "@/store/authModule";
 
-export default createStore({
-    state:{
 
-    },
+
+
+
+const store = createStore({
+    state:() =>({
+    }),
     modules:{
         auth:authModule
-    }
+    },
+
 })
+
+export default store

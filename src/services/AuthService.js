@@ -1,7 +1,11 @@
 import api from "@/api/api";
 
 export default class AuthService{
-    static async login(login, password){
-        return api.post("/auth/login",{login:login,password:password})
+    static async login(loginData){
+        return await api.post("/auth/login",loginData)
+    }
+
+    static async logout(){
+        return await api.delete("/auth/sign-out")
     }
 }
