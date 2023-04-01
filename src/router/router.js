@@ -53,8 +53,8 @@ router.beforeEach((to, from, next) => {
         if(store.state.auth.isAuth && (('/' + store.state.auth.currentUser.role) === to.path))
             next()
         else next({path:"/login"})
-    }
-    next()
+    }else
+        next()
 })
 
 export default router

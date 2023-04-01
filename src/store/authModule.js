@@ -1,6 +1,4 @@
-import axios from "axios";
 import AuthService from "@/services/AuthService";
-import login from "@/pages/LoginPage.vue";
 
 export const authModule = {
     state: () =>({

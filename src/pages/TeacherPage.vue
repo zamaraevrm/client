@@ -1,5 +1,5 @@
 <template>
-    <h3>Фамилия Имя Отчество   <br>     Преподаватель</h3>
+    <h3>{{ user.firstname + " " + user.surname + " " + user.patronymic }}   <br>     Преподаватель</h3>
     <div class="container">
 
         <button>ведомости</button>
@@ -13,8 +13,16 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
-    name: "TeacherPage"
+    name: "TeacherPage",
+    computed:{
+        ...mapState({
+            user: state => state.auth.currentUser
+        }),
+
+    },
 }
 </script>
 
