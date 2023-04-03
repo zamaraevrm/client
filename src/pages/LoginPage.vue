@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container">
+    <div class="container" style="margin: auto">
         <div class="roles">
             <button @click="setRole(user,'dekanat')">деканат</button>
             <button @click="setRole(user,'student')">студент</button>
@@ -34,7 +34,9 @@
             <div class="vhod">
                 <button
                     @click="loginUser(user)"
-                >войти</button>
+                >
+                    войти
+                </button>
             </div>
         </form>
 
@@ -82,5 +84,21 @@ export default {
 </script>
 
 <style scoped>
+.login{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
 
+.pass{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.roles {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    border-radius: 50px;
+}
 </style>

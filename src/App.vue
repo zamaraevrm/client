@@ -29,9 +29,7 @@ a{
     padding: 0 60px;
     margin:  10px;
 }
-.header{
 
-}
 
 .nav{
     display: flex;
@@ -73,27 +71,10 @@ h1 {
     height: 24px;
 }
 
-.roles {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    border-radius: 50px;
-}
-
-.login{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-
-}
-
-.pass{
-    display: flex;
-    justify-content: center;
-    height: 100%;
 
 
-}
+
+
 
 .vhod{
     display: flex;
@@ -164,16 +145,6 @@ video{
     display: flex;
     justify-content: center;
     height: 100%;
-}
-
-.sostfac{
-    font-family:'Roboto Condensed', sans-serif;;
-    padding-left: 520px;
-    padding-right: 240px;
-    margin-top: -310px;
-    font-size: 20px;
-    text-align: justify;
-    color: forestgreen;
 }
 
 .foto{

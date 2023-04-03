@@ -5,6 +5,13 @@ import StudentPage from "@/pages/StudentPage.vue";
 import TeacherPage from "@/pages/TeacherPage.vue";
 import DekanatPage from "@/pages/DekanatPage.vue";
 import store from "@/store/store";
+import InfoAboutFaculty from "@/pages/InfoAboutFaculty.vue";
+import ContactPage from "@/pages/ContactPage.vue";
+import internationalActive from "@/pages/InternationalActive.vue";
+import Ads from "@/pages/Ads.vue";
+import Raspisanie from "@/pages/Raspisanie.vue";
+import SostavFaculty from "@/pages/SostavFaculty.vue";
+import Specnapr from "@/pages/Specnapr.vue";
 
 
 
@@ -18,6 +25,34 @@ const routes = [
         path: "/login",
         component: LoginPage,
 
+    },
+    {
+        path:"/info",
+        component: InfoAboutFaculty,
+    },
+    {
+        path: "/contact",
+        component: ContactPage
+    },
+    {
+        path: "/international-active",
+        component: internationalActive
+    },
+    {
+        path: "/ads",
+        component: Ads,
+    },
+    {
+        path: "/raspisanie",
+        component: Raspisanie
+    },
+    {
+        path: "/sostav-faculty",
+        component: SostavFaculty
+    },
+    {
+        path: "/specnapr",
+        component: Specnapr
     },
     {
         path: "/student",
@@ -53,8 +88,8 @@ router.beforeEach((to, from, next) => {
         if(store.state.auth.isAuth && (('/' + store.state.auth.currentUser.role) === to.path))
             next()
         else next({path:"/login"})
-    }else
-        next()
+    }
+    next()
 })
 
 export default router

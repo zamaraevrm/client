@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <button>информация о факультете</button>
-        <button>контакты</button>
-        <button>международная деятельность</button>
-        <button>расписание занятий</button>
-        <button>список сотрудников</button>
+        <button @click="$router.push('/info')">информация о факультете</button>
+        <button @click="$router.push('/contact')">контакты</button>
+        <button @click="$router.push('/international-active')">международная деятельность</button>
+        <button @click="$router.push('/raspisanie')">расписание занятий</button>
+        <button >список сотрудников</button>
     </div>
 
     <form @submit.prevent class="enter">
