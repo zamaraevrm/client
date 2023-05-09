@@ -2,7 +2,7 @@ import AuthService from "@/services/AuthService";
 
 export const authModule = {
     state: () =>({
-        isAuth: false,
+        isAuth: true,
         currentUser: {}
     }),
     getters:{
@@ -20,10 +20,10 @@ export const authModule = {
         async loginUser({commit}, user){
             try {
                 const response = await AuthService.login(user)
-                commit('setIsAuth',true)
+                commit('setIsAuth', true)
                 const data = response.data
-                commit('setCurrentUser',data.user)
-                localStorage.setItem('token',data.accessToken)
+                commit('setCurrentUser', data.user)
+                localStorage.setItem('token', data.accessToken)
                 return true
             }
             catch (e) {
@@ -35,9 +35,18 @@ export const authModule = {
             try {
                 const response = await AuthService.logout()
                 commit('setCurrentUser', {})
-                commit('setIsAuth',false)
+                commit('setIsAuth', false)
             }
             catch (e) {
+                console.log(e)
+            }
+        },
+        async refresh(){
+            try{
+                const response = AuthService.refresh();
+                localStorage.setItem('token', response.data.accessToken)
+                commit('setIsAuth', true)
+            }catch (e){
                 console.log(e)
             }
         }

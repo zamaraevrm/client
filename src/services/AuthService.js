@@ -8,4 +8,8 @@ export default class AuthService{
     static async logout(){
         return await api.delete("/auth/sign-out")
     }
+
+    static async refresh(){
+        return await api.put("/auth/refresh")
+    }
 }

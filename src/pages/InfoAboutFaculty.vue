@@ -1,8 +1,9 @@
 <template>
     <div class="menuinf">
-        <button @click="$router.push('/sostav-faculty')">состав факультета</button>
-        <button @click="$router.push('/specnapr')">специальности и направления подготовки</button>
-        <button @click="$router.push('/ads')">объявления</button>
+        <button @click="$router.push('/sostav-faculty')">Состав факультета</button>
+        <button @click="$router.push('/specnapr')">Специальности и направления подготовки</button>
+        <button @click="$router.push('/ads')">Объявления</button>
+        <button @click="$router.push('/reviews')">Отзовы работадателей</button>
     </div>
 
     <div class="information">
@@ -25,16 +26,14 @@ export default {
 </script>
 
 <style scoped>
-
 .information{
-    font-family:'Roboto Condensed', sans-serif;;
-    padding-left: 240px;
-    padding-right: 240px;
+    font-family:'Roboto Condensed', sans-serif;
     font-size: 20px;
     text-align: justify;
 }
 
 video{
     margin-top: 1em;
+    width: 100%;
 }
 </style>

@@ -1,15 +1,16 @@
 <template>
 
-    <div class="container" style="margin: auto">
-        <div class="roles">
+    <div class="container1" >
+        <div class="razdel">
             <button @click="setRole(user,'dekanat')">деканат</button>
             <button @click="setRole(user,'student')">студент</button>
             <button @click="setRole(user,'teacher')">преподаватель</button>
         </div>
 
-        <h2>Логин</h2>
+
 
         <form @submit.prevent>
+            <h2>Логин</h2>
             <div class="login">
                 <input
                     v-model="user.login"
@@ -40,9 +41,6 @@
             </div>
         </form>
 
-    </div>
-    <div class="esc">
-        <!--		<a href="index.html"><img src="images/Rectangle 21.png"></a>-->
     </div>
 </template>
 
@@ -84,21 +82,5 @@ export default {
 </script>
 
 <style scoped>
-.login{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
 
-.pass{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-.roles {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    border-radius: 50px;
-}
 </style>

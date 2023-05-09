@@ -1,19 +1,12 @@
 <template>
     <h3> {{user.firstname + " " + user.surname + " " + user.patronymic}} <br>     Студент</h3>
 
-    <div class="container">
+    <div class="razdelstudent">
 
-        <button>моя успеваемость</button>
-        <button>справки</button>
-        <button>статус справки</button>
-        <button>заказать справку</button>
-
-        <button>мои вопросы</button>
-        <button>задолженности</button>
-        <button>пересдачи </button>
-        <button>споры</button>
-        <button>расписание занятий </button>
-        <button>расписание зачетов/экзаменов</button>
+        <button>Электронная зачетка</button>
+        <button>Выдача справок</button>
+        <button>Вопрос-ответ</button>
+        <button>Академический отпуск</button>
     </div>
 </template>
 

@@ -1,5 +1,4 @@
 <template>
-    <h1>Факультет геоинформатики и информационной безопасности</h1>
     <div class="raspzan">
         <button>Расписание занятий</button>
     </div>
@@ -11,7 +10,8 @@
             <button>2</button>
             <button>3</button>
             <button>4</button>
-        </div></div>
+        </div>
+    </div>
 </template>
 
 <script>

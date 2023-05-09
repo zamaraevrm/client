@@ -12,12 +12,16 @@ import Ads from "@/pages/Ads.vue";
 import Raspisanie from "@/pages/Raspisanie.vue";
 import SostavFaculty from "@/pages/SostavFaculty.vue";
 import Specnapr from "@/pages/Specnapr.vue";
+import SciencePage from "@/pages/SciencePage.vue";
+import ReviewsPage from "@/pages/ReviewsPage.vue";
+import ScienceProjectPage from "@/pages/ScienceProjectPage.vue";
+import GeodaninftechPage from "@/pages/GeodaninftechPage.vue";
 
 
 
 const routes = [
     {
-        path:"/",
+        path:"",
         component: Main,
 
     },
@@ -74,7 +78,23 @@ const routes = [
         meta:{
             requiresAuth: true
         }
-    }
+    },
+    {
+        path: "/science",
+        component: SciencePage,
+    },
+    {
+        path:"/reviews",
+        component: ReviewsPage,
+    },
+    {
+        path:"/science-project",
+        component: ScienceProjectPage,
+    },
+    {
+        path: "/Geodaninftech",
+        component: GeodaninftechPage,
+    },
 ]
 
 const router = createRouter({
