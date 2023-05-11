@@ -1,11 +1,12 @@
 import AuthService from "@/services/AuthService";
 import jwtDecode from "jwt-decode";
+import getToken from "@/store/getToken";
 
 
 export const authModule = {
     state: () =>({
         isAuth: localStorage.getItem('token') !== null,
-        currentUser: jwtDecode(localStorage.getItem('token'))
+        currentUser:  getToken()
     }),
     getters:{
 
@@ -57,3 +58,4 @@ export const authModule = {
     },
     namespaced:true
 }
+
