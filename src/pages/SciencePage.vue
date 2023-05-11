@@ -1,6 +1,6 @@
 <template>
     <div class="menuinf">
-        <button>Научные проекты</button>
+        <button @click="$router.push('/science-project')">Научные проекты</button>
         <button>Научные конференции</button>
         <button>Научные журналы</button>
     </div>

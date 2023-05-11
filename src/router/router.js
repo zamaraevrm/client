@@ -16,6 +16,8 @@ import SciencePage from "@/pages/SciencePage.vue";
 import ReviewsPage from "@/pages/ReviewsPage.vue";
 import ScienceProjectPage from "@/pages/ScienceProjectPage.vue";
 import GeodaninftechPage from "@/pages/GeodaninftechPage.vue";
+import VedomostPage from "@/pages/VedomostPage.vue";
+import jwtDecode from "jwt-decode";
 
 
 
@@ -73,6 +75,10 @@ const routes = [
         }
     },
     {
+        path: "/teacher/vedomost",
+        component: VedomostPage
+    },
+    {
         path:"/dekanat",
         component: DekanatPage,
         meta:{
@@ -92,7 +98,7 @@ const routes = [
         component: ScienceProjectPage,
     },
     {
-        path: "/Geodaninftech",
+        path: "/geodaninftech",
         component: GeodaninftechPage,
     },
 ]
@@ -105,8 +111,11 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
 
     if(to.meta.requiresAuth) {
-        if(store.state.auth.isAuth && (('/' + store.state.auth.currentUser.role) === to.path))
+
+        if(store.state.auth.isAuth) {
+            console.log("2")
             next()
+        }
         else next({path:"/login"})
     }
     next()

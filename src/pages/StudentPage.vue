@@ -1,5 +1,5 @@
 <template>
-    <h3> {{user.firstname + " " + user.surname + " " + user.patronymic}} <br>     Студент</h3>
+    <h3> {{user.family_name  + " " + user.given_name + " " + user.middle_name}} <br>Студент</h3>
 
     <div class="razdelstudent">
 

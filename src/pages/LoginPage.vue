@@ -45,8 +45,9 @@
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 import store from "@/store/store";
+import jwtDecode from "jwt-decode";
 
 
 export default {
@@ -72,9 +73,11 @@ export default {
             user.role = role
         },
         async loginUser(user){
-            await this.login(user)
-            if(store.state.auth.isAuth)
+            const res = await this.login(user)
+            if(store.state.auth.isAuth ) {
+
                 this.$router.push('/' + user.role)
+            }
         }
     },
     name: "login"
@@ -82,5 +85,9 @@ export default {
 </script>
 
 <style scoped>
+.container1{
+    padding: 0 60px;
+    margin:  10px;
+}
 
 </style>

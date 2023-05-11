@@ -1,6 +1,7 @@
 <script setup>
 import Header from "@/components/Header.vue";
-
+import store from "@/store/store";
+import jwtDecode from "jwt-decode";
 </script>
 
 <template>
@@ -24,17 +25,10 @@ body{
     overflow-y: scroll;
 
 }
-.container1{
-    max-width: 1280px;
-    padding: 0 60px;
-    margin:  10px;
-
-
-}
 
 
 h5{
-    font-family: ;
+    //font-family: ;
     font-size: 24px;
     text-align: center;
     text-shadow: sandybrown;
@@ -51,7 +45,7 @@ h5{
     top: 0;
     right: 0;
     font-size: 18px;
-    boarder-radius: 35px;
+    border-radius: 35px;
     width: 90px;
     height: 20px;
 }
@@ -66,8 +60,8 @@ button{
     font-size: 23px;
     margin: 12px;
     background-color: #e0fad4;
-    float: center;
-/*margin: 0 auto;
+    /*float: center;
+margin: 0 auto;
     display: block;*/
 
 }
