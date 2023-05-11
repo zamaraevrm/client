@@ -15,8 +15,7 @@
 
 <script>
 import BaseButton from "@/components/UI/base-button.vue";
-import store from "@/store/store";
-import jwtDecode from "jwt-decode";
+
 
 export default {
     name: "Main",

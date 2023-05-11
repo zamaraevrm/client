@@ -1,7 +1,6 @@
 <script setup>
 import Header from "@/components/Header.vue";
-import store from "@/store/store";
-import jwtDecode from "jwt-decode";
+
 </script>
 
 <template>
@@ -28,7 +27,6 @@ body{
 
 
 h5{
-    //font-family: ;
     font-size: 24px;
     text-align: center;
     text-shadow: sandybrown;

@@ -17,7 +17,7 @@ import ReviewsPage from "@/pages/ReviewsPage.vue";
 import ScienceProjectPage from "@/pages/ScienceProjectPage.vue";
 import GeodaninftechPage from "@/pages/GeodaninftechPage.vue";
 import VedomostPage from "@/pages/VedomostPage.vue";
-import jwtDecode from "jwt-decode";
+
 
 
 

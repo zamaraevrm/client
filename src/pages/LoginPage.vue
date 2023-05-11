@@ -45,9 +45,9 @@
 </template>
 
 <script>
-import {mapActions, mapGetters} from "vuex";
+import {mapActions} from "vuex";
 import store from "@/store/store";
-import jwtDecode from "jwt-decode";
+
 
 
 export default {
