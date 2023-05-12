@@ -112,13 +112,12 @@ router.beforeEach((to, from, next) => {
 
     if(to.meta.requiresAuth) {
 
-        if(store.state.auth.isAuth) {
+        if(store.getters["auth/checkAuth"]) {
             console.log("2")
             next()
         }
         else next({path:"/login"})
-    }
-    next()
+    }else    next()
 })
 
 export default router

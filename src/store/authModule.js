@@ -5,18 +5,16 @@ import getToken from "@/store/getToken";
 
 export const authModule = {
     state: () =>({
-        isAuth: localStorage.getItem('token') !== null,
         currentUser:  getToken()
     }),
     getters:{
-
+        checkAuth(state) {
+            return localStorage.getItem('token') !== null
+        }
     },
     mutations:{
         setCurrentUser(state, value){
             state.currentUser = value
-        },
-        checkAuth(state) {
-            state.isAuth = localStorage.getItem('token') !== null
         },
     },
     actions:{
