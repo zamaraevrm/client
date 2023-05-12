@@ -20,6 +20,11 @@ export const authModule = {
         },
     },
     actions:{
+        mutationUser({commit}){
+            const user = getToken()
+
+            commit('setCurrentUser', user)
+        },
         async loginUser({commit}, user){
             try {
                 const response = await AuthService.login(user)
@@ -28,10 +33,11 @@ export const authModule = {
                 const decode = jwtDecode(token)
                 commit('setCurrentUser', decode)
                 localStorage.setItem('token', token)
+                return true
             }
             catch (e) {
                 console.log(e)
-
+                return false
             }
         },
         async logout({commit}){

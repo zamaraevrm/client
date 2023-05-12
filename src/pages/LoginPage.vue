@@ -45,8 +45,9 @@
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import {mapActions, mapMutations} from "vuex";
 import store from "@/store/store";
+import getToken from "@/store/getToken";
 
 
 
@@ -66,6 +67,9 @@ export default {
         }
     },
     methods:{
+        ...mapMutations({
+            setUser:"auth/setCurrentUser"
+        }),
         ...mapActions({
            login: "auth/loginUser"
         }),
@@ -74,6 +78,7 @@ export default {
         },
         async loginUser(user){
             const res = await this.login(user)
+            this.setUser(getToken())
             if(store.state.auth.isAuth ) {
 
                 this.$router.push('/' + user.role)
