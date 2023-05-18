@@ -1,6 +1,6 @@
 <template>
     <div class="elzach">
-        <a >Электронная зачетка</a>
+        <h2>Электронная зачетка</h2>
     </div>
 
 
@@ -19,12 +19,12 @@
             <td style="background-color: lightyellow;">ПРЕДМЕТ 1<br>ФИО преподавателя</td>
             <td>ЗАЧЕТ
                 <div class="img_spor">
-                    <a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a>
+                    <a href="spor">ОТКРЫТЬ СПОР</a>
                 </div>
             </td>
             <td>Экзамен 5
                 <div class="img_spor">
-                    <a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a>
+                    <a href="spor">ОТКРЫТЬ СПОР</a>
                 </div>
             </td>
             <td></td>
@@ -33,40 +33,40 @@
         </tr>
         <tr>
             <td style="background-color: lightyellow;">ПРЕДМЕТ 2<br>ФИО преподавателя</td>
-            <td>неЗАЧЕТ <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
-            <td>Экзамен недопущен <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
+            <td>неЗАЧЕТ <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
+            <td>Экзамен недопущен <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
             <td></td>
             <td></td>
 
         </tr>
         <tr>
             <td style="background-color: lightyellow;">ПРЕДМЕТ 3<br>ФИО преподавателя</td>
-            <td>ЗАЧЕТ <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
-            <td>Экзамен 3 <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
+            <td>ЗАЧЕТ <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
+            <td>Экзамен 3 <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
             <td></td>
             <td></td>
 
         </tr>
         <tr>
             <td style="background-color: lightyellow;">ПРЕДМЕТ 4<br>ФИО преподавателя</td>
-            <td>ЗАЧЕТ <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
-            <td>Экзамен 4 <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
+            <td>ЗАЧЕТ <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
+            <td>Экзамен 4 <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
             <td></td>
             <td></td>
 
         </tr>
         <tr>
             <td style="background-color: lightyellow;">ПРЕДМЕТ 5<br>ФИО преподавателя</td>
-            <td>неЗАЧЕТ <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
-            <td>Экзамен недопущен <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
+            <td>неЗАЧЕТ <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
+            <td>Экзамен недопущен <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
             <td></td>
             <td></td>
 
         </tr>
         <tr>
             <td style="background-color: lightyellow;">ПРЕДМЕТ 6<br>ФИО преподавателя</td>
-            <td>ЗАЧЕТ <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
-            <td>Экзамен 5 <div class="img_spor"><a @click="$router.push('/spor')"><img src="free-icon-argue-5739084.png" width="20" height="20" alt="ОТКРЫТЬ СПОР"></a></div></td>
+            <td>ЗАЧЕТ <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
+            <td>Экзамен 5 <div class="img_spor"><a href="spor">ОТКРЫТЬ СПОР</a></div></td>
             <td></td>
             <td></td>
 
@@ -82,6 +82,12 @@ export default {
 </script>
 
 <style scoped>
+a{
+    color: blue;
+}
+table{
+    display: table;
+}
 td, th {
     border: 1px solid #264537;  /* границы между столбцами */
 
