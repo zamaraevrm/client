@@ -24,8 +24,24 @@ body{
     overflow-y: scroll;
 
 }
+.container1{
+    mx-width: 1280px;
+    padding: 0 60px;
+    margin:  10px;
 
 
+}
+
+h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    color: #fdfdfe;
+    text-shadow: 0px 0px 5px #36b346, 0px 0px 10px #36b346, 0px 0px 10px #36b346,
+    0px 0px 20px #36b346;
+
+}
 h5{
     font-size: 24px;
     text-align: center;
@@ -43,10 +59,11 @@ h5{
     top: 0;
     right: 0;
     font-size: 18px;
-    border-radius: 35px;
+    boarder-radius: 35px;
     width: 90px;
     height: 20px;
 }
+
 .menuinf{
     display: flex;
     justify-content: center;
@@ -58,13 +75,26 @@ button{
     font-size: 23px;
     margin: 12px;
     background-color: #e0fad4;
-    /*float: center;
-margin: 0 auto;
-    display: block;*/
+}
+.information{
+    font-family:'Roboto Condensed', sans-serif;;
+    padding-left: 240px;
+    padding-right: 240px;
+    font-size: 20px;
+    text-align: justify;
+
 
 }
+video{
+    position: absolute;
+    justify-content: center;
 
 
+    width: 40%;
+    height: 40%;
+
+    object-fit: cover;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -299,4 +329,88 @@ table{
     width: 400px;
     height: 130px;
 }
+
+.text-field {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10px;
+}
+/* стили для label */
+.text-field__label {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18;
+    margin-bottom: 0.25rem;
+    color: darkgreen;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 100px;
+}
+/* стили для input */
+.text-field__input {
+    display: block;
+    width: 50%;
+    height: calc(9rem + 2px);
+    padding: 0rem 0.75rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #206e4c;
+    background-color: #D9D9D9;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.sporstud {
+    margin-top: 150px;
+    margin-left: -230px;
+    justify-content: right;
+    display: flex;
+    height: 100%;
+
+}
+.elzach{
+    text-align: center;
+}
+.elzach button{
+    width: 500px;
+    height: 50px;
+}
+table{
+    border-spacing:10px;
+    border-color:darkgreen;
+    border-style:solid;
+    background-color: #E2F0D9;
+}
+td, th {
+    border: 1px solid #264537;  /* границы между столбцами */
+
+}
+.img_spor{
+    margin-left: 160px;
+    margin-top: -17px;
+}
+.save_vedomost{
+    display: flex;
+    justify-content: center;
+}
+
+.select{
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.spravka_zayvka{
+    margin: 0 auto;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
 </style>

@@ -82,7 +82,6 @@ export default {
         async loginUser(user){
             const res = await this.login(user)
             this.setUser(getToken())
-            console.log(res)
             if(this.checkUser() && res) {
 
                 this.$router.push('/' + user.role)

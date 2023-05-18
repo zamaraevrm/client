@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const uri = import.meta.env.VITE_API_URL
-console.log(`asdf ${uri}`)
 export const API_URL = `${uri}/api`.replace('undefined','')//process.env.API_URL//process.env.API_URL
 
 const api = axios.create({

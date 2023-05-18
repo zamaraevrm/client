@@ -3,7 +3,7 @@
 
     <div class="razdelstudent">
 
-        <button>Электронная зачетка</button>
+        <button @click="$router.push('/zachetka')">Электронная зачетка</button>
         <button>Выдача справок</button>
         <button>Вопрос-ответ</button>
         <button>Академический отпуск</button>

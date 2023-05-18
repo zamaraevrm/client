@@ -26,14 +26,15 @@ export default {
 </script>
 
 <style scoped>
-.information{
+/*.information{
     font-family:'Roboto Condensed', sans-serif;
     font-size: 20px;
     text-align: justify;
+    margin: 0 240px;
 }
 
 video{
     margin-top: 1em;
-    width: 100%;
-}
+    width: 40%;
+}*/
 </style>

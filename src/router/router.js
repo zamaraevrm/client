@@ -17,6 +17,8 @@ import ReviewsPage from "@/pages/ReviewsPage.vue";
 import ScienceProjectPage from "@/pages/ScienceProjectPage.vue";
 import GeodaninftechPage from "@/pages/GeodaninftechPage.vue";
 import VedomostPage from "@/pages/VedomostPage.vue";
+import ZachetkaPage from "@/pages/ZachetkaPage.vue";
+import SporPage from "@/pages/SporPage.vue";
 
 
 
@@ -101,6 +103,14 @@ const routes = [
         path: "/geodaninftech",
         component: GeodaninftechPage,
     },
+    {
+        path: "/zachetka",
+        component: ZachetkaPage
+    },
+    {
+        path: "/spor",
+        component: SporPage
+    }
 ]
 
 const router = createRouter({
